@@ -15,7 +15,7 @@ with col2:
     m = folium.Map(localization=[-22.908333, -43.196388], zoom_start=16)
     folium.Marker(
         [-43.196388,-41.881322],
-        popup="Coral-de-fogo"
+        popup="Coral-de-fogo",
         tooltip="Coral-de-fogo"
     ).add_to(m)
 
