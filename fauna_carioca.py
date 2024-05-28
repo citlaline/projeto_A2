@@ -12,9 +12,9 @@ with col1:
     st.write("Você escolheu:", option1)
 
 with col2:
-    m = folium.Map(localization=[-22.908333, -43.196388], zoom_start=16)
+    m = folium.Map(localization=[-43.196388, -22.908333], zoom_start=16)
     folium.Marker(
-        [-41.881322, -43.196388],
+        [-43.196388, -41.881322,],
         popup="Coral-de-fogo",
         tooltip="Coral-de-fogo"
     ).add_to(m)
