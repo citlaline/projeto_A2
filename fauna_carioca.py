@@ -19,4 +19,4 @@ with col2:
         tooltip="Coral-de-fogo"
     ).add_to(m)
 
-st_data = st.folium(m, width = 725)
+st_data = st_folium(m, width = 725)
