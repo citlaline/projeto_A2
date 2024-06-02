@@ -1,7 +1,7 @@
 import streamlit as st
-import excel
+import pandas as pd
 
-arquivo = open('fauna_carioca_rev.xlsx')
+doc = pd.read_excel('fauna_carioca_rev.xlsx')
 
 option1 = st.selectbox(
 "Escolha o seu municipio: ",
@@ -9,7 +9,6 @@ option1 = st.selectbox(
 index=None)
 st.write("Você escolheu:", option1)
 
-for registro in arquivo:
-    if registro['Municipio'] == option1:
-        print(registro['Nome cientifico'])
+if doc['Municipio'] == option1:
+    print(doc['Nome cientifico'])
         
