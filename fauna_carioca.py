@@ -9,6 +9,8 @@ option1 = st.selectbox(
 index=None)
 st.write("Você escolheu:", option1)
 
-if doc['Municipio'] == option1:
-    print(doc['Nome cientifico'])
+filtered_df = df[df['Municipio'] == 'option1']
+result = filtered_df['Nome cientifico']
+
+print(result)
         
