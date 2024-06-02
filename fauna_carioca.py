@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-doc = pd.read_excel('fauna_carioca_rev.xlsx')
+df = pd.read_excel('fauna_carioca_rev.xlsx')
 
 option1 = st.selectbox(
 "Escolha o seu municipio: ",
