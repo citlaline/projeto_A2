@@ -1,6 +1,7 @@
 import streamlit as st
-from streamlit_folium import st_folium
-import folium
+import pandas as pd
+
+df = pd.read_excel('fauna_carioca_rev.xlsx')
 
 col1, col2 = st.columns(2)
 
@@ -12,11 +13,7 @@ with col1:
     st.write("Você escolheu:", option1)
 
 with col2:
-    m = folium.Map(localization=[-43.196388, -22.908333], zoom_start=16)
-    folium.Marker(
-        [-43.196388, -41.881322,],
-        popup="Coral-de-fogo",
-        tooltip="Coral-de-fogo"
-    ).add_to(m)
-
-st_data = st_folium(m, width = 725)
+    for registro in df:
+        if registro['Municipio'] == option1:
+            print(registro)
+        
