@@ -15,5 +15,7 @@ with col1:
 with col2:
    filtered_df = df[df['Municipio'] == option1]
    result = filtered_df['Nome cientifico']
-   st.write(result)
+   unique_results = filtered_df.drop_duplicates()
+   st.write(unique_results)
+
         
