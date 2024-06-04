@@ -19,6 +19,6 @@ with col2:
    for column in result.columns:
       li = result[column].tolist()
       listaOrdenada = sorted(li)
-      st.write(listaOrdenada)
+   st.write(listaOrdenada)
 
         
