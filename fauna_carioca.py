@@ -16,9 +16,9 @@ with col2:
    filtered_df = df[df['Municipio'] == option1]
    result = filtered_df['Nome cientifico']
    unique_results = result.drop_duplicates()
-   for column in result:
-      li = result.tolist()
+   for column in result.columns:
+      li = result[column].tolist()
       listaOrdenada = sorted(li)
-   st.write(listaOrdenada)
+      st.write(listaOrdenada)
 
         
