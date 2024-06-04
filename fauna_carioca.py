@@ -13,7 +13,7 @@ with col1:
    st.write("Você escolheu:", option1)
 
 with col2:
-   filtered_df = df[df['Municipio'] == 'option1']
+   filtered_df = df[df['Municipio'] == option1]
    result = filtered_df['Nome cientifico']
    st.write(result)
         
