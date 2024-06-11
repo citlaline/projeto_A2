@@ -18,5 +18,5 @@ with col2:
     for species in unique_species:
         st.subheader(species)
         conservation_status = filtered_df[filtered_df['Nome cientifico'] == species]['Estado de conservacao'].iloc[0]
-        st.write("Estado de conservação:", conservation_status)
+        st.write(conservation_status)
         
