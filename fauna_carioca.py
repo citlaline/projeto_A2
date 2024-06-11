@@ -17,5 +17,6 @@ with col2:
    result = filtered_df['Nome cientifico']
    unique_results = result.drop_duplicates().sort_values()
    st.write(unique_results.tolist())
+   st.write()
 
         
