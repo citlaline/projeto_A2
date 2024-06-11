@@ -13,10 +13,11 @@ with col1:
    st.write("Você escolheu:", option1)
 
 with col2:
-   filtered_df = df[df['Municipio'] == option1]
-   result = filtered_df['Nome cientifico']
-   unique_results = result.drop_duplicates().sort_values()
-   st.write(unique_results.tolist())
-   st.write(unique_results['Estado de conservacao'])
+    filtered_df = df[df['Municipio'] == option1]
+    unique_results = filtered_df['Nome cientifico'].drop_duplicates().sort_values()
+    for species in unique_results:
+        st.write(species)
+        conservation_status = filtered_df[filtered_df['Nome cientifico'] == species]['Estado de conservacao'].iloc[0]
+        st.write("Estado de conservacao:", conservation_status)
 
         
