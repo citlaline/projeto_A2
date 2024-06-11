@@ -18,7 +18,7 @@ with col2:
     for species in unique_species:
         common_name = filtered_df[filtered_df['Nome cientifico'] == species]['Nome comum'].iloc[0]
         st.subheader(f"{species}")
-        st.write("Nome comum:",f"{common_name}")
+        st.write("Nome comum: ",f"{common_name}")
         conservation_status = filtered_df[filtered_df['Nome cientifico'] == species]['Estado de conservacao'].iloc[0]
         st.write(conservation_status)
         
