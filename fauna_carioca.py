@@ -17,7 +17,8 @@ with col2:
     unique_species = filtered_df['Nome cientifico'].drop_duplicates().sort_values()
     for species in unique_species:
         common_name = filtered_df[filtered_df['Nome cientifico'] == species]['Nome comum'].iloc[0]
-        st.subheader(f"{species} - {common_name}")
+        st.subheader(f"{species}")
+        st.subheader(f"{common_name}")
         conservation_status = filtered_df[filtered_df['Nome cientifico'] == species]['Estado de conservacao'].iloc[0]
-        st.write("Estado de conservação:", conservation_status)
+        st.write(conservation_status)
         
