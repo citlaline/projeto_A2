@@ -4,7 +4,7 @@ import pandas as pd
 df = pd.read_excel('fauna_carioca_rev.xlsx')
 
 col1, col2 = st.columns(2)
-tab1, tab2, tab3 = st.tabs(["Nome-comum", "Nome científico", "Gráfico"])
+tab1, tab2, tab3 = st.tabs(["Nome comum", "Nome científico", "Estado de Conservação"])
 
 with col1:
    option1 = st.selectbox(
@@ -13,13 +13,24 @@ with col1:
    index=None)
    st.write("Você escolheu:", option1)
 
-with col2:
+with tab1:
     filtered_df = df[df['Municipio'] == option1]
     unique_species = filtered_df['Nome cientifico'].drop_duplicates().sort_values()
-    for species in unique_species:
+    for specie in unique_species:
+       st.subheader(f"{specie}")
+       
+with tab2: 
+    filtered_df = df[df['Municipio'] == option1]
+    unique_names = filtered_df['Nome comum'].drop_duplicates().sort_values()
+    unique_names = filtered_df['Nome comum'].drop("Sem Informações").
+    for name in unique_names:
         common_name = filtered_df[filtered_df['Nome cientifico'] == species]['Nome comum'].iloc[0].lower()
-        st.subheader(f"{species}")
-        st.write("Nome comum: ",f"{common_name}")
-        conservation_status = filtered_df[filtered_df['Nome cientifico'] == species]['Estado de conservacao'].iloc[0]
-        st.write(conservation_status)
+        st.subheader(f"{name}")
+
+   
+
+
+# st.w("Nome comum: ",f"{common_name}")
+#    conservation_status = filtered_df[filtered_df['Nome cientifico'] == species]['Estado de conservacao'].iloc[0]
+    st.write(conservation_status)
         
