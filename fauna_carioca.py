@@ -22,7 +22,7 @@ with tab1:
 with tab2: 
     filtered_df = df[df['Municipio'] == option1]
     unique_names = filtered_df['Nome comum'].drop_duplicates().sort_values()
-    unique_names = filtered_df['Nome comum'].drop("Sem Informações").
+    unique_names = filtered_df['Nome comum'].drop("Sem Informações")
     for name in unique_names:
         common_name = filtered_df[filtered_df['Nome cientifico'] == species]['Nome comum'].iloc[0].lower()
         st.subheader(f"{name}")
