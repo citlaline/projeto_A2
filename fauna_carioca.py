@@ -33,9 +33,10 @@ with tab3:
    ('Espécie Ameaçada', 'Espécie não Ameaçada'),
    index=None)
    st.write("Você escolheu:", option2)
-   filtered_df = df[df['Municipio'] == option1]
+   filtered_df = df[df['Estado de conservacao'] == option1]
    unique_species = filtered_df['Nome cientifico'].drop_duplicates().sort_values()
    for specie in unique_species:
-      conservation_status = filtered_df[filtered_df['Nome cientifico'] == species]['Estado de conservacao'].iloc[0]
-      st.subheader(f"{conservation_status}")
+      st.subheader(f"{specie}")
+       = filtered_df[filtered_df['Nome cientifico'] == species]['Estado de conservacao'].iloc[0]
+      st.write(f"{conservation_status}")
         
