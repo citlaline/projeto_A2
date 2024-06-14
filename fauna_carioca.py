@@ -4,7 +4,7 @@ import pandas as pd
 df = pd.read_excel('fauna_carioca_rev.xlsx')
 
 col1, col2 = st.columns(2)
-tab1, tab2, tab3 = st.tabs(["Nome comum", "Nome científico", "Estado de Conservação"])
+tab1, tab2, tab3 = st.tabs(["Nome científico", "Nome comum", "Estado de Conservação"])
 
 with col1:
    option1 = st.selectbox(
@@ -38,6 +38,6 @@ with tab3:
     for _, row in unique_species.iterrows():
         scientific_name = row['Nome cientifico']
         common_name = row['Nome comum']
-        st.subheader(f"Nome Científico: {scientific_name}")
+        st.subheader(f"{scientific_name}")
         st.write(f"Nome Comum: {common_name}")
 
