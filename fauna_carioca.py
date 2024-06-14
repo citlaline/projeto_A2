@@ -24,12 +24,18 @@ with tab2:
     unique_names = filtered_df['Nome comum'].drop_duplicates().sort_values()
     unique_names = unique_names[unique_names != "Sem Informações"]
     for name in unique_names:
-        common_name = name.lower()  # Assuming you meant to use 'name' here
+        common_name = name.lower()
         st.subheader(f"{name}")
-   
 
-
-# st.w("Nome comum: ",f"{common_name}")
-#    conservation_status = filtered_df[filtered_df['Nome cientifico'] == species]['Estado de conservacao'].iloc[0]
-    st.write(conservation_status)
+with tab3:
+   option2 = st.selectbox(
+   "Escolha as espécies pelo seu estado de conservação: ",
+   ('Espécie Ameaçada', 'Espécie não Ameaçada'),
+   index=None)
+   st.write("Você escolheu:", option2)
+   filtered_df = df[df['Municipio'] == option1]
+   unique_species = filtered_df['Nome cientifico'].drop_duplicates().sort_values()
+   for specie in unique_species:
+      conservation_status = filtered_df[filtered_df['Nome cientifico'] == species]['Estado de conservacao'].iloc[0]
+      st.subheader(f"{conservation_status}")
         
