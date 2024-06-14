@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import matplotlib.pyplot as plt
 
 df = pd.read_excel('fauna_carioca_rev.xlsx')
 
@@ -40,4 +41,16 @@ with tab3:
         common_name = row['Nome comum']
         st.subheader(f"{scientific_name}")
         st.write(f"Nome Comum: {common_name}")
+
+with tab4: 
+    filtered_df = df[df['Municipio'] == option1]
+    species_count = filtered_df['Nome cientifico'].nunique()
+    labels = ['Espécie Ameaçada', 'Espécie não Ameaçada']
+    sizes = [species_count, len(df['Nome cientifico'].unique()) - species_count] 
+    colors = ['lightcoral', 'lightskyblue']
+    explode = (0.1, 0)
+    plt.pie(sizes, explode=explode, labels=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=140)
+    plt.axis('equal')
+
+    st.pyplot()
 
