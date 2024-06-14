@@ -4,7 +4,7 @@ import pandas as pd
 df = pd.read_excel('fauna_carioca_rev.xlsx')
 
 col1, col2 = st.columns(2)
-tab1, tab2, tab3 = st.tabs(["Nome científico", "Nome comum", "Estado de Conservação"])
+tab1, tab2, tab3, tab4 = st.tabs(["Nome científico", "Nome comum", "Estado de Conservação", "Gráfico de Conservação"])
 
 with col1:
    option1 = st.selectbox(
