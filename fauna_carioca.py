@@ -2,25 +2,20 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
-st.set_page_config(
-    page_title="Fauna Carioca",
-    page_icon=":shark:", 
-    layout="wide",
-    initial_sidebar_state="auto",
-    )
+st.markdown(
+   """
+   <style>
+   .stApp {
+        background-image: 'fauna_carioca.png';
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    </style>
+    """,
 
-background = """
-<style>
-body {
-    background-image: 'fauna_carioca.png';
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-</style>
-"""
-
-st.markdown(background, unsafe_allow_html=True)
+   unsafe_allow_html=True
+)
 
 df = pd.read_excel('fauna_carioca_rev.xlsx')
 
