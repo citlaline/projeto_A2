@@ -3,6 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 st.markdown(
+   """
    <style>
    .stApp {
        background-image: url('https://static.toiimg.com/thumb/msid-106568577,wid…mgsize-322474/10-largest-forests-in-the-world.jpg');
