@@ -2,10 +2,7 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
-logo_file = st.file_uploader("Fauna.png", type=["png", "jpg", "jpeg"])
-
-if logo_file is not None:
-    st.image(logo_file, width=200)
+st.logo(LOGO_URL_LARGE, "Fauna.png", icon_image=LOGO_URL_SMALL)
 
 df = pd.read_excel('fauna_carioca_rev.xlsx')
 
