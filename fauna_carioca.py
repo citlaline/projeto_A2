@@ -2,7 +2,14 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
-custom_css = """
+st.set_page_config(
+    page_title="Fauna Carioca",
+    page_icon=":shark:", 
+    layout="wide",
+    initial_sidebar_state="auto",
+    )
+
+background = """
 <style>
 body {
     background-image: 'fauna_carioca.png';
@@ -13,7 +20,7 @@ body {
 </style>
 """
 
-st.markdown(custom_css, unsafe_allow_html=True)
+st.markdown(background, unsafe_allow_html=True)
 
 df = pd.read_excel('fauna_carioca_rev.xlsx')
 
