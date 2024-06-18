@@ -13,7 +13,7 @@ body {
 </style>
 """
 
-st.markdown(custom_css, unsafe_allow_html=True
+st.markdown(custom_css, unsafe_allow_html=True)
 
 df = pd.read_excel('fauna_carioca_rev.xlsx')
 
