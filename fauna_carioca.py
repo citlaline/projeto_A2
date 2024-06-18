@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
-st.image("Fauna.png", caption=None, width=600, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
+st.image("Fauna.png", caption=None, width=300, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
 
 df = pd.read_excel('fauna_carioca_rev.xlsx')
 
