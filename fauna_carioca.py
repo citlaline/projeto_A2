@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 custom_css = """
 <style>
 body {
-    background-image: url('fauna_carioca.png');
+    background-image: 'fauna_carioca.png';
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
