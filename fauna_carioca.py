@@ -2,21 +2,6 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
-st.markdown(
-   """
-   <style>
-   .stApp {
-       background-image: url('https://static.toiimg.com/thumb/msid-106568577,wid…mgsize-322474/10-largest-forests-in-the-world.jpg');
-       background-size: cover;
-       background-repeat: no-repeat;
-       background-attachment: fixed;
-   }
-   </style>
-   """,
-
-   unsafe_allow_html=True
-   )
-
 df = pd.read_excel('fauna_carioca_rev.xlsx')
 
 col1, col2 = st.columns(2)
