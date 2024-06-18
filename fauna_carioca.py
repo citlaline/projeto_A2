@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
+st.logo(LOGO_URL_LARGE, link="https://streamlit.io/gallery", icon_image=LOGO_URL_SMALL)
+
 df = pd.read_excel('fauna_carioca_rev.xlsx')
 
 col1, col2 = st.columns(2)
