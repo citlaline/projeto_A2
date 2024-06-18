@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
-st.logo(LOGO_URL_LARGE, link="https://streamlit.io/gallery", icon_image=LOGO_URL_SMALL)
+st.logo(LOGO_URL_LARGE, link="C:\Users\B435637\Downloads\Fauna.png", icon_image=LOGO_URL_SMALL)
 
 df = pd.read_excel('fauna_carioca_rev.xlsx')
 
