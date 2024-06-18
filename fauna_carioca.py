@@ -45,10 +45,14 @@ with tab3:
 with tab4: 
     filtered_df = df[df['Municipio'] == option1]
     species_count = filtered_df['Nome cientifico'].nunique()
+    total_species_count = df['Nome cientifico'].nunique()
+   
     labels = ['Espécie Ameaçada', 'Espécie não Ameaçada']
-    sizes = [species_count, len(df['Nome cientifico'].unique()) - species_count] 
+    sizes = [species_count, total_species_count - species_count] 
     colors = ['lightcoral', 'lightskyblue']
     explode = (0.1, 0)
+   
+    plt.figure(figsize=(8, 6))
     plt.pie(sizes, explode=explode, labels=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=140)
     plt.axis('equal')
 
